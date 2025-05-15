@@ -1,9 +1,19 @@
+*{
+  margin: 3;
+  padding: 0;
+}
 /*Barra de navegacion*/
 nav {
   background-color: #0055ff;
   color: white;
   font-size: 25px;
   display: flex;
+  /*eje principal, solo se puede usar si el elemtento es flex */
+  justify-content:space-between ;
+  height: auto;
+  /*eje secundario, solo se puede usar si el elemtento es flex */
+  align-items:center ;
+  padding: 10px;
 }
 
 /*
