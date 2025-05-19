@@ -1,6 +1,7 @@
 *{
   margin: 3;
   padding: 0;
+  font-family: "Space Grotesk", sans-serif;
 }
 /*Barra de navegacion*/
 nav {
@@ -46,4 +47,12 @@ nav div {
 nav div a:visited, nav div a:link {
   color: white;
   text-decoration: none;
+}
+
+/*MAIN*/
+
+main {
+  height: 70vh;
+  min-height: 70vh;
+  background-color: grey;
 }
