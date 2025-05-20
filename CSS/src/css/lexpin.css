@@ -52,7 +52,33 @@ nav div a:visited, nav div a:link {
 /*MAIN*/
 
 main {
-  height: 70vh;
-  min-height: 70vh;
-  background-color: grey;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+}
+
+/* GRID
+  grid es un tipo de displey que permite manejar un sistema de filas y columna
+*/
+
+header {
+  height: 80vh;
+  min-height: 80vh;
+  background-color: aqua;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-radius: 25px;
+  /*eje principal*/
+  justify-content: center;
+  /*eje secundario*/
+  align-content:center;
+}
+
+header > div , header > {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
