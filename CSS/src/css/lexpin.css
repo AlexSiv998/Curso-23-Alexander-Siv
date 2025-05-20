@@ -15,7 +15,6 @@ nav {
   /*eje secundario, solo se puede usar si el elemtento es flex */
   align-items:center ;
   padding: 10px;
-  border-radius: 15px 15px 15px 15px ;
 }
 nav div {
   display: flex;
@@ -40,22 +39,26 @@ nav div {
   display: flex;
 }
 
-.enlace :hover{
-  color: black;
-}
 
 nav div a:visited, nav div a:link {
   color: white;
   text-decoration: none;
+  transition: all 3s ease;
 }
+
+.enlace :hover{
+  color: black;
+}
+
 
 /*MAIN*/
 
 main {
   background-color: black;
+  background-image: linear-gradient( to right, #1616ae, #6e30c5);
   display: flex;
   flex-direction: column;
-  padding: 60px;
+  padding: 40px 20px;
 }
 
 /* GRID
@@ -66,6 +69,8 @@ header {
   height: 80vh;
   min-height: 80vh;
   background-color: aqua;
+  background-image: url("https://img.freepik.com/fotos-premium/color-abstracto-papel-plantillas_980736-10657.jpg");
+  background-size: cover;
   display: grid;
   grid-template-columns: 50% 50%;
   border-radius: 25px;
@@ -75,10 +80,41 @@ header {
   align-content:center;
 }
 
-header > div , header > {
+header > div  {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+
+header > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/*ANIMACIÓN*/
+.gradient-background {
+  background: linear-gradient(291deg,#2c5097,#0055ff,#ffffff);
+  background-size: 180% 180%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+    75% {
+    background-position: 75% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
