@@ -1,0 +1,20 @@
+tips para mi cv mejorado
+
+tip 1. css, como hacer mas eficiente el código
+
+crear y organizar las clases:
+
+ejemplo en ccs crear .fila, .centrar-primario, .centrar secundario y luego en html colocar la clase según se requiera 
+
+pro: ergónoma de código
+contra: el css y html quedara visualmente mas largo
+
+tip 2. si se puede al momento realizar varios "p" no es necesario encerrarlo cada uno en un div, se puede poner varios "p" dentro de un div
+
+tip 3. mantener armonía entre colores, 2 o 3 max, el fondo debe ser amigable (colores fríos, pasteles, o grises)
+
+tip 4. usar lista para organizar lo que sea mucho 
+
+tip 5. si el body no es mucho, usar height: 100vh: min-heigh: 1000vh
+
+
