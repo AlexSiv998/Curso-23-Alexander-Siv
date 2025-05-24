@@ -1,5 +1,29 @@
 @import url();
 
+/*
+  Medidas
+  px: pixeles (Absoluta)
+  %: porcentaje (relativa)
+  em: tamaño de la fuente del elemento padre
+  rem: tamaño de la fuente del elemento raíz
+  vh: porcentaje de la altura de la ventana
+  vw: porcentaje del ancho de la ventana
+  vmin: porcentaje del menor tamaño de la ventana
+  vmax: porcentaje del mayor tamaño de la ventana
+*/
+
+:root {
+  --color-principal: #0055ff;
+  --color-secundario: #2c5097;
+  --color-terciario: #ffffff;
+  --color-cuaternario: #000000;
+  --color-quintario: #ff9e02;
+  --titulares: 50px;
+  --subtitulares: 30px;
+  --texto: 20px;
+  --texto-pequeño: 15px;
+}
+
 *{
   margin: 3;
   padding: 0;
@@ -17,7 +41,7 @@ nav {
   height: auto;
   /*eje secundario, solo se puede usar si el elemtento es flex */
   align-items:center ;
-  padding: 10px;
+  padding: 10px 20px; 
 }
 nav div {
   display: flex;
@@ -105,19 +129,83 @@ main {
   grid es un tipo de displey que permite manejar un sistema de filas y columna
 */
 
+
 header {
   height: 80vh;
-  min-height: 80vh;
+  min-height: 700px;
+  background-size: cover;
+  /*opacity: 0.1;*/
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  border-radius: 25px;
+  /*grid-template-rows: 200px;*/
+  /*eje principal*/
+  justify-items: center;
+  /*eje secundario*/
+  align-content: center;
+  gap: 20px;
+  position: relative;
+}
+
+
+header::before {
   background-image: url("https://img.freepik.com/fotos-premium/color-abstracto-papel-plantillas_980736-10657.jpg");
   background-size: cover;
-  display: grid;
-  grid-template-columns: 50% 50%;
+  background-position: center;
+  content: "";
+  position: absolute;
+  z-index: 5;
+  opacity: 0.15;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 25px;
-  /*eje principal*/
-  justify-content: center;
-  /*eje secundario*/
-  align-content:center;
-  position: relative;
+  border: 5px solid white;
+  box-shadow: 10px 5px 12px 5px rgba(0, 0, 0, 1);
+}
+
+h1 {
+  font-size: var(--titulares);
+  color: var(--color-quintario);
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+}
+
+h2 {
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+}
+
+.info {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+  font-weight: 300;
+}
+
+button {
+  background-color: var(--color-quintario);
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: white;
+  color: var(--color-quintario);
+  box-shadow: 0px 0px 10px black;
+}
+
+p,h1,h2,h3,h4,h5,h6 {
+  cursor: default;
 }
 
 header > div  {
@@ -127,6 +215,12 @@ header > div  {
   align-items: center;
   gap: 20px;
 }
+
+.menu-responsive{
+  display: none;
+}
+
+
 
 header > div > div {
   display: flex;
@@ -156,5 +250,42 @@ header > div > div {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  p {
+    color: rgb(97, 190, 20)
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  p {
+    color: blue
+  }
+  .menu-movil{
+    display: none;
+  }
+  .menu-responsive{
+    display: flex;
+  }
+  header {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  p {
+    color: green
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  p {
+    color: yellow
   }
 }
