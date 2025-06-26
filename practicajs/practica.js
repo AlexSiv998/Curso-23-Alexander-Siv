@@ -82,7 +82,7 @@ switch (meses) {
     console.log("Octubre");
     break;
   case 11:
-    console.log("Nobiembre");
+    console.log("Noviembre");
     break;
   case 12:
     console.log("Diciembre");
@@ -90,3 +90,4 @@ switch (meses) {
   default:
     console.log("mes no valido");
 }
+
