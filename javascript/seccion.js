@@ -82,3 +82,81 @@ let mayorOIgualQue = 5 >= 5; // Mayor o igual que (true)
   - OR: ||
   - NOT: !
 */
+
+//Operadores de asignación
+/*
+  Los operadores de asignación son utilizados para asignar valores a variables.
+  - Asignación simple: =
+  - Suma y asignación: +=
+  - Resta y asignación: -=
+  - Multiplicación y asignación: *=
+  - División y asignación: /=
+  - Módulo y asignación: %=
+*/
+let asignacion = 5; // Asignación simple
+/*
+  Para las siguientes operaciones, se toma el valor actual de la variable 'asignacion'
+  y se realiza la operación con el valor indicado, luego se asigna el resultado de nuevo a 'asignacion'.
+*/
+asignacion += 3; // Suma y asignación (asignacion = asignacion + 3)
+asignacion -= 2; // Resta y asignación (asignacion = asignacion - 2)
+asignacion *= 2; // Multiplicación y asignación (asignacion = asignacion * 2)
+asignacion /= 4; // División y asignación (asignacion = asignacion / 4)
+asignacion %= 3; // Módulo y asignación (asignacion = asignacion % 3)
+
+// switch
+/*
+  La estructura switch se utiliza para ejecutar diferentes bloques de código basados en el valor de una expresión.
+  Es útil cuando se tienen múltiples condiciones que dependen del mismo valor.
+*/
+
+let dia = 1; // Supongamos que 1 es Lunes, 2 es Martes, etc.
+switch (dia) {
+  case 1:
+    console.log("Lunes");
+    break;
+  case 2:
+    console.log("Martes");
+    break;
+  case 3:
+    console.log("Miércoles");
+    break;
+  case 4:
+    console.log("Jueves");
+    break;
+  case 5:
+    console.log("Viernes");
+    break;
+  case 6:
+    console.log("Sábado");
+    break;
+  case 7:
+    console.log("Domingo");
+    break;
+  default:
+    console.log("Día no válido");
+}
+
+// if else
+/*
+  La estructura if-else se utiliza para ejecutar un bloque de código si una condición es verdadera,
+  y otro bloque si la condición es falsa.
+*/
+
+let edad = 18; // Supongamos que la edad es 18
+if (edad < 0 || edad > 120) {
+  console.log("Edad no válida");
+} else if (edad < 18) {
+  console.log("Eres menor de edad");
+} else {
+  console.log("Eres mayor de edad");
+}
+
+
+let inputs = prompt("Ingrese un número entre 1 y 10:");
+
+
+let input = prompt("Ingrese un número entre 1 o 2:");
+
+
+
