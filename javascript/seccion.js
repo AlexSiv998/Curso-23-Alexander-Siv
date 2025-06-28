@@ -152,11 +152,42 @@ if (edad < 0 || edad > 120) {
   console.log("Eres mayor de edad");
 }
 
-
 let inputs = prompt("Ingrese un número entre 1 y 10:");
-
 
 let input = prompt("Ingrese un número entre 1 o 2:");
 
+//Funciones
+/*
+  Las Funciones son bloques que de codigos que realizan una tarea especifica y pueden ser reutilizadas.
+*/
+// Declaracion de una Funcion
+function holaMundo(){
+  console.log("Hola, mundo");
+}
+
+//llamada a la funcion
+holaMundo(); // Esto ejecuta a la funcion y muestra "Hola, mundo" en la consola 
+holaMundo(); // Estos se pueden llamar cuantas veces se desee 
 
 
+//funcion con parametros 
+/*
+  Los parametros son variables que se pasan a una funcion para que pueda...
+*/
+
+function saludar(nombre = "Amigo"){
+  console.log("!Hola," + nombre + "¡");
+}
+
+//Llamada de la funcion con arguento
+saludar("Maria"); // Esto muestra "!Hola, Maria¡" en la consola
+saludar("Juan"); // Esto muestra "!Hola, Juan¡" en la consola
+saludar(); // Esto muestra "!Hola, Pedro¡" en la consola
+
+
+//Funcion con multiples parametros
+function sumar(num1 = 0, num2 = 0) {
+  console.log(num1 + num2);
+}
+
+sumar(5,10);
