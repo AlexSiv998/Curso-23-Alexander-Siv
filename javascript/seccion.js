@@ -191,3 +191,61 @@ function sumar(num1 = 0, num2 = 0) {
 }
 
 sumar(5,10);
+
+// Alcance (Scope)
+/*
+  El alcance se refiere a la visibilidad de las variables en diferentes partes del código.
+  Hay dos tipos principales de alcance:
+  - Alcance global: Las variables declaradas fuera de cualquier función son accesibles en todo el código.
+  - Alcance local: Las variables declaradas dentro de una función solo son accesibles dentro de esa función.
+*/
+
+let saludos = "Hola";
+
+if(true) {
+  var variableGlobal = "soy global";
+  let variableLocal = "soy Local";
+  const Constante = "soy constante";
+  console.log(variableGlobal,variableLocal,Constante);
+}
+
+console.log(variableGlobal,variableLocal,Constante);
+
+//Funciones con retorno
+/*
+  Las funciones pueden devolver un valor utilizando la palabra clave `return`.
+  Esto permite que la función produzca un resultado que puede ser utilizado posteriormente.
+*/
+
+function multiplicarConRetorno(num1,num2) {
+  return num1 * num2;
+}
+
+console.log(multiplicarConRetorno(5,3));
+let resultado = multiplicarConRetorno(10,5) + 5;
+
+function multiplicarSinRetorno(num1, num2) {
+  num1 * num2; // No devuelve nada, solo realiza la operación
+}
+
+console.log(multiplicarSinRetorno(5, 3)); // Esto muestra undefined en la consola
+console.log(multiplicarSinRetorno(10,3) + 5)
+
+//Recursion
+/*
+  La recursión es una técnica en la que una función se llama a sí misma para resolver un problema.
+  Es útil para problemas que pueden dividirse en subproblemas más pequeños.
+*/
+
+/*
+  Ejemplo: Imprimir números del 1 al 5 usando recursión
+*/
+function imprimirNumerosRecursivo(num) {
+  if (num > 5) return; // Caso base: si num es mayor que 5, termina la recursión
+  console.log(num); // Imprime el número actual
+  imprimirNumerosRecursivo(num + 1); // Llama a la función con el siguiente número
+}
+
+imprimirNumerosRecursivo(0); // Llama a la función para iniciar la recursión
+
+
