@@ -23,7 +23,7 @@ let boolean = true; // booleano solo puede ser (true/false)
 //let array = [1, 2, 3,]; // array (lista)
 let array = ["pera", "manzana", "uva",]; // lo mismo pero con string
 console.log(array); //imprime ["pera", "manzana", "uva",]
-console.log(array[7]); //imprime el primer elemento (0 es el elemto de inicio)
+console.log(array[3]); //imprime el primer elemento (0 es el elemto de inicio)
 let nulo = null; // nulo (sin valor)
 let indefinido; // undefined (sin asiginar)
 let objeto = {nombre: "Alex", edad: 30}; //objeto
@@ -182,7 +182,7 @@ function saludar(nombre = "Amigo"){
 //Llamada de la funcion con arguento
 saludar("Maria"); // Esto muestra "!Hola, Maria¡" en la consola
 saludar("Juan"); // Esto muestra "!Hola, Juan¡" en la consola
-saludar(); // Esto muestra "!Hola, Pedro¡" en la consola
+saludar(); // Esto muestra "!Hola, amigo¡" en la consola
 
 
 //Funcion con multiples parametros
