@@ -9,9 +9,7 @@
   <script>
     function imprimirNumerosPares(num) {
       if (num > 100) return;
-      if (num % 2 === 0) {
-        console.log(num);
-      }
+      if (num % 2 === 0) console.log(num);
       imprimirNumerosPares(num +1);
     }
     imprimirNumerosPares(0);

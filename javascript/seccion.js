@@ -249,3 +249,44 @@ function imprimirNumerosRecursivo(num) {
 imprimirNumerosRecursivo(0); // Llama a la función para iniciar la recursión
 
 
+//1
+function imprimir_numeros(numero, limite = 2) {
+  if (numero <= limite) {
+    if (numero % 2 === 0) console.log(numero);
+    imprimir_numeros(numero + 1, limite);
+  }
+}
+
+imprimir_numeros(0, 100);
+
+//2
+let frutas = ["uva", "melon", "tomate", "banana", "maiz"];
+
+function imprimir_array(lista = [], numero = 0) {
+  if (numero < lista.length) {
+    console.log(lista[numero]);
+    imprimir_array(lista, numero + 1);
+  }
+}
+
+imprimir_array(frutas);
+
+//3
+
+function calcular_factorial(numero, acumulador = 1) {
+  if (numero >= 1) {
+    acumulador = acumulador * numero;
+    if (numero === 1) {
+      console.log("El factorial es: " + acumulador);
+      return;
+    }
+    calcular_factorial(numero - 1, acumulador);
+  } else if (numero === 0) {
+    console.log("El factorial de 0 es 1");
+    return;
+  } else {
+    console.log("Ingresa un valor valido");
+  }
+}
+
+calcular_factorial(7);
