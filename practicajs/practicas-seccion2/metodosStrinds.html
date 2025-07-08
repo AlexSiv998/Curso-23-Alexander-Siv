@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //1. Crea una función que reciba un string pero retorne cuantas palabras tiene.//
+    let texto = "Bienvenidos a lexpin"
+    console.log(texto.split(" ").length);
+
+    //2. Crea una función que reciba un string y cuente cuantas vocales tiene//
+    let texto1 = "Hola, bienvenidos a lexpin";
+    texto1 = texto1.toLowerCase();
+    let vocales = "aeiou";
+    let contador = 0;
+    for (let i = 0; i < texto1.length; i++) {
+      if (vocales.includes(texto1[i])) {
+        contador++;
+      }
+    }
+    console.log("Número de vocales:", contador);
+    //3. Crea una función que reciba un string y retorne el string al revés.//
+    function invertirCadena(cadena) {
+      return cadena.split("").reverse().join("");
+    }
+    let textoOriginal = "AMOR";
+    let textoInvertido = invertirCadena(textoOriginal);
+    console.log(textoInvertido);
+    //4. Crea una función que reciba un string y retorne el string al revés.//
+    function invertirCadena(cadena) {
+      return cadena.split("").reverse().join("");
+    }
+    let textoOriginal1 = "se verlas al reves";
+    let textoInvertido1 = invertirCadena(textoOriginal1);
+    textoOriginal1 = textoOriginal1.toLowerCase();
+    if ( textoOriginal1 == textoInvertido1){ 
+    console.log("Es palindromo");
+    }
+      else{ 
+    console.log("No es palindromo");
+    }
+  </script>
+</body>
+</html>
