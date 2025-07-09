@@ -8,9 +8,11 @@
 <body>
   <script>
     //1. Crea una función que reciba un string pero retorne cuantas palabras tiene.//
-    let texto = "Bienvenidos a lexpin"
-    console.log(texto.split(" ").length);
-
+    function contadorPalabras(texto) {
+      return texto.split(" ").length;
+    }
+    console.log(contadorPalabras("Bienvenidos a lexpin"));
+    
     //2. Crea una función que reciba un string y cuente cuantas vocales tiene//
     let texto1 = "Hola, bienvenidos a lexpin";
     texto1 = texto1.toLowerCase();
