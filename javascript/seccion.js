@@ -847,3 +847,31 @@ arquero.atacar_con_arco();
   - Agrega la clase "vampiro" cuyos ataques regenerar un % aleatorio de vida al personaje.
   - Agrega la posibilidad de 1 entre 10 de que un personaje se tropiece y no pueda hacer nada en esa ronda.
 */
+
+    /*
+      El buscaminas
+    */
+      //Inicializo mi variable que reprentara mi tablero
+      let tablero = [];
+
+      //Creo una funcion para llenar mi tablero de cuantas filas o columnas el usuario desee
+      function llenar_tablero(tablero, longitud) {
+        //Voy a utilizar este for para crear tantas filas como la logintud ingresada por el usuario
+        for (let i = 0; i < longitud; i++) {
+          //Selecciono una posicion y creo un array que representara cada fila
+          tablero[i] = [];
+          //Este console log es solo para ver como se crea cada fila
+          console.log(tablero);
+          //Ejecuto un ciclo nuevamente para crear N elementos dentro de cada fila (habra la misma cantidad de elementos
+          //o tambien se pueden llamar columnas como filas )
+          for (let j = 0; j < longitud; j++) {
+            //crea un nuevo elemento en cada fila
+            tablero[i][j] = "";
+            //imprimo como se va creando cada elemento
+            console.log(tablero);
+          }
+        }
+        return tablero;
+      }
+
+      console.log(llenar_tablero(tablero, 9));
