@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Personaje {
+      constructor(nombre, vida, defensa, daño, velocidad) {
+        this.nombre = nombre;
+        this.vida = vida;
+        this.defensa = defensa;
+        this.daño = daño;
+        this.velocidad = velocidad;
+      }
+    
+      atacar() {console.log(`${this.name} ataca con su puño`);}
+      saludar() {console.log(`${this.name} "saludar con nombre y "`);}
+    }
+    class guerrero extends Personaje {
+      constructor(nombre, vida, defensa, daño, velocidad, fuerza) {
+      super(nombre, vida, defensa, daño, velocidad); // fuerza = + daño - velocidad
+      this.fuerza = fuerza; 
+    }
+    // armas = ["espada", "Escudo", "maza"];
+    atacar_con_arma() {
+      console.log(`${this.nombre} ataca con su arma con fuerza ${this.fuerza}`);
+    }
+    // ulti = "frenesi: aumenta el ataque y la velocidad + 2  pero reduce la vida y la defensa - 3 por 5 turnos"
+    }
+    class mago extends Personaje {
+      constructor(nombre, vida, defensa, daño, velocidad, inteligencia) {
+      super(nombre, vida, defensa, daño, inteligencia); // inteligencia = + daño - defensa
+      this.inteligencia = inteligencia;
+    }
+    // hechizo = ["fireBall", "flash", "kamehameha"];
+    atacar_con_hechizo() {
+      console.log(`${this.nombre} ataca con su hechizo con destresa ${this.inteligencia}`);
+    }
+    // ulti = "manaZone: aumenta el ataque y la defensa + 3 pero reduce y la velocidad - 5 por 7 turnos"
+    }
+    class Arquero extends Personaje {
+      constructor(nombre, vida, defensa, daño, velocidad, precision) {
+      super(nombre, vida, defensa, daño,); // precision = + velocidad -daño
+      this.precision = precision; 
+    }
+    // fechas = ["afilada", "penetrante", "incendiaria"];
+    atacar_con_arco() {
+      console.log(`${this.nombre} ataca con su arco y flecha con precisión ${this.precision}`);}
+    }
+    // ulti = "intinto: aumenta todos los stads + 2 por 3 turnos"
+  </script>
+</body>
+</html>
