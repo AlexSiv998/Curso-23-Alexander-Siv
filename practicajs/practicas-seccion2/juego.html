@@ -20,35 +20,35 @@
       saludar() {console.log(`${this.name} "saludar con nombre y "`);}
     }
     class guerrero extends Personaje {
-      constructor(nombre, vida, defensa, daño, velocidad, fuerza) {
-      super(nombre, vida, defensa, daño, velocidad); // fuerza = + daño - velocidad
-      this.fuerza = fuerza; 
+      constructor(nombre, vida, defensa, daño, velocidad, armas) {
+      super(nombre, vida, defensa, daño, velocidad); 
+      this.armas = armas = ["espada", "Escudo", "maza"];
     }
     // armas = ["espada", "Escudo", "maza"];
     atacar_con_arma() {
-      console.log(`${this.nombre} ataca con su arma con fuerza ${this.fuerza}`);
+      console.log(`${this.nombre} ataca con su arma con fuerza ${this.armas}`);
     }
     // ulti = "frenesi: aumenta el ataque y la velocidad + 2  pero reduce la vida y la defensa - 3 por 5 turnos"
     }
     class mago extends Personaje {
-      constructor(nombre, vida, defensa, daño, velocidad, inteligencia) {
-      super(nombre, vida, defensa, daño, inteligencia); // inteligencia = + daño - defensa
-      this.inteligencia = inteligencia;
+      constructor(nombre, vida, defensa, velocidad, daño, hechizo) {
+      super(nombre, vida, defensa, velocidad, daño); 
+      this.hechizo = hechizo = ["fireBall", "flash", "kamehameha"];
     }
     // hechizo = ["fireBall", "flash", "kamehameha"];
     atacar_con_hechizo() {
-      console.log(`${this.nombre} ataca con su hechizo con destresa ${this.inteligencia}`);
+      console.log(`${this.nombre} ataca con su conguro magico ${this.hechizo}`);
     }
-    // ulti = "manaZone: aumenta el ataque y la defensa + 3 pero reduce y la velocidad - 5 por 7 turnos"
+    // ulti = "manaZone: aumenta el daño y la defensa + 3 pero reduce y la velocidad - 5 por 7 turnos"
     }
     class Arquero extends Personaje {
-      constructor(nombre, vida, defensa, daño, velocidad, precision) {
-      super(nombre, vida, defensa, daño,); // precision = + velocidad -daño
-      this.precision = precision; 
+      constructor(nombre, vida, defensa, daño, velocidad, fechas) {
+      super(nombre, vida, defensa, daño,);
+      this.fechas = fechas = ["afilada", "penetrante", "incendiaria"];
     }
     // fechas = ["afilada", "penetrante", "incendiaria"];
     atacar_con_arco() {
-      console.log(`${this.nombre} ataca con su arco y flecha con precisión ${this.precision}`);}
+      console.log(`${this.nombre} ataca con su arco y flecha con precisión ${this.fechas}`);}
     }
     // ulti = "intinto: aumenta todos los stads + 2 por 3 turnos"
   </script>
