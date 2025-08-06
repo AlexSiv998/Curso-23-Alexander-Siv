@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+</head>
+<body>
+  <Section class=" min-h-screen bg-radial-[at_25%_25%] from-black to-zinc-900 to-75%">
+    <h1 class="Titular"> Alex Sivira</h1>
+    <h2 class="Subtitulo"> Programador Web</h2>
+  </Section>
+  <script>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        /*
+        Las animaciones de tipo from permiten animar desde el estado de la animación hasta
+        el estado natural del elemento.
+        gsap.from(".titular", {y: -100, opacity: 0, duration: 1, scale: 2.5})
+        gsap.from(".subtitulo", {y: -50, opacity: 0, duration: 1, scale: 1.5})
+        */
+        /*
+        Las animaciones de tipo to permiten animar desde el estado natural del elemento
+        hasta el estado de la animación.
+        gsap.to(".titular", {
+          y: -100,
+          opacity: 0,
+          duration: 1,
+          scale: 2.5,
+        });
+        */
+
+        gsap.fromTo(".titular", {
+          y: 200,
+          opacity: 0,
+          scale: 0.5
+        }, {
+          y: -100,
+          opacity: 1,
+          scale: 2.5,
+          duration: 1
+        })
+        
+      });
+  </script>
+</body>
+</html>
