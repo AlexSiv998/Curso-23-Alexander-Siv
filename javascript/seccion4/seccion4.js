@@ -77,9 +77,5 @@ async function getData() {
   }).cat
 }
 
-let Numeros = [1, 2, 3, 4, 5];
 
-for (variable of ) {
-  // código a ejecutar en cada iteración
-}
 
